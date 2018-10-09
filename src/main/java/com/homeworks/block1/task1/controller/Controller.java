@@ -34,6 +34,7 @@ public class Controller {
 
         do {
             view.askForInput(word);
+
             inputted = scanner.next();
         }
         while (!inputted.toLowerCase().equals(word.toLowerCase()));
