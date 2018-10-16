@@ -7,6 +7,10 @@ import java.util.Scanner;
  * Демонстрация данных согласно ТЗ
  */
 public class View {
+    private final static String YOUR_NUMBER_IS_LOWER = "Вы загадали число ниже";
+    private final static String YOUR_NUMBER_IS_HIGHER = "Вы загадали число выше";
+    private final static String YOU_RIGHT = "Вы угадали! Ура !!!!!!";
+    private final static String YOUR_HISTORY = "Ваша история попыток :";
 
     public int askNumber(int min, int max) {
         int num;
@@ -24,17 +28,17 @@ public class View {
 
 
     public void outputHigher() {
-        System.out.println("Вы загадали число выше");
+        System.out.println(YOUR_NUMBER_IS_HIGHER);
     }
 
 
     public void outputLower() {
-        System.out.println("Вы загадали число ниже");
+        System.out.println(YOUR_NUMBER_IS_LOWER);
     }
 
     public void outputRightAnswer(ArrayList <Integer> attemptsHistory) {
-        System.out.println("Вы угадали! Ура !!!!!!");
-        System.out.println("Ваша история попыток :");
+        System.out.println(YOU_RIGHT);
+        System.out.println(YOUR_HISTORY);
         attemptsHistory.forEach((value) -> System.out.print(value + " "));
     }
 }
