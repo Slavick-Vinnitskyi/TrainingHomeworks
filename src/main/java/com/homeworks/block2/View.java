@@ -1,4 +1,4 @@
-package com.homeworks.block2.task2;
+package com.homeworks.block2;
 
 import java.util.ArrayList;
 import java.util.Scanner;

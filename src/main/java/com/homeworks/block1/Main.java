@@ -1,8 +1,8 @@
-package com.homeworks.block1.task1;
+package com.homeworks.block1;
 
-import com.homeworks.block1.task1.controller.Controller;
-import com.homeworks.block1.task1.model.Model;
-import com.homeworks.block1.task1.view.View;
+import com.homeworks.block1.controller.Controller;
+import com.homeworks.block1.model.Model;
+import com.homeworks.block1.view.View;
 
 public class Main {
 

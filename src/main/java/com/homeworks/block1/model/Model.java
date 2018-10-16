@@ -1,4 +1,4 @@
-package com.homeworks.block1.task1.model;
+package com.homeworks.block1.model;
 
 public class Model {
 

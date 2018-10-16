@@ -1,7 +1,7 @@
-package com.homeworks.block1.task1.controller;
+package com.homeworks.block1.controller;
 
-import com.homeworks.block1.task1.model.Model;
-import com.homeworks.block1.task1.view.View;
+import com.homeworks.block1.model.Model;
+import com.homeworks.block1.view.View;
 
 import java.util.Scanner;
 

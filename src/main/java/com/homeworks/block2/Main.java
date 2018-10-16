@@ -1,4 +1,4 @@
-package com.homeworks.block2.task2;
+package com.homeworks.block2;
 
 /**
  *  Игровая JAVA – программа, которая отгадывает число по принципу – «больше – меньше» :

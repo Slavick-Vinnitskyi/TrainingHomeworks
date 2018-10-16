@@ -1,4 +1,4 @@
-package com.homeworks.block1.task1.view;
+package com.homeworks.block1.view;
 
 public class View {
 
