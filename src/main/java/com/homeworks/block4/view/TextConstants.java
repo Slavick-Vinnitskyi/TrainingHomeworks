@@ -5,4 +5,5 @@ public interface TextConstants {
     String WRONG_DATA = "input.wrong.data";
     String ENTER_FIRST_NAME = "input.first.name.data";
     String LOGIN_DATA = "input.login.data";
+    String PHONE_DATA = "input.telephone.data";
 }

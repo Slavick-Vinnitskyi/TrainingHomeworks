@@ -2,7 +2,6 @@ package com.homeworks.block4.view;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 import static com.homeworks.block4.view.TextConstants.INPUT_STRING_DATA;
 import static com.homeworks.block4.view.TextConstants.WRONG_DATA;
@@ -10,14 +9,7 @@ import static com.homeworks.block4.view.TextConstants.WRONG_DATA;
 public class View {
 
     private static String MESSAGES_BUNDLE_NAME = "messages";
-    public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("ua", "UA"));
-
-
-    public String askData(String ask) {
-        System.out.println(ask);
-        Scanner scan = new Scanner(System.in);
-        return scan.nextLine();
-    }
+    public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en"));
 
     public void printMessage(String message) {
         System.out.println(message);
