@@ -7,7 +7,8 @@ import static com.homeworks.block4.view.TextConstants.INPUT_STRING_DATA;
 import static com.homeworks.block4.view.TextConstants.WRONG_DATA;
 
 public class View {
-
+    //TODO : сдлеать ENUM для локалей
+    //TODO: в Controller`e сделать по методу на валидацию каждой порции данных, в методах вызывать askData через do while
     private static String MESSAGES_BUNDLE_NAME = "messages";
     public static final ResourceBundle bundle = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en"));
 
@@ -36,5 +37,5 @@ public class View {
                 bundle.getString(message)));
     }
 
-//    TODO: в Controller`e сделать по методу на валидацию каждой порции данных, в методах вызывать askData через do while
+
 }

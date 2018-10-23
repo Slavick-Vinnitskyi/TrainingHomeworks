@@ -11,7 +11,7 @@ public class UtilityController {
     private Scanner scanner;
     private View view;
 
-    public UtilityController(Scanner scanner, View view) {
+    UtilityController(Scanner scanner, View view) {
         this.scanner = scanner;
         this.view = view;
     }

@@ -8,5 +8,5 @@ public interface RegexContainer {
     // login
     String REGEX_LOGIN = "^[A-Za-z0-9_-]{8,20}$";
     //regex for telephone
-    String REGEX_PHONE = "^((8|\\+3)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
+    String REGEX_PHONE = "^(\\+38)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
 }
