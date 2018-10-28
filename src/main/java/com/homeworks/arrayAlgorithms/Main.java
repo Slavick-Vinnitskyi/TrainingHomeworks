@@ -1,7 +1,6 @@
 package com.homeworks.arrayAlgorithms;
 
 import java.util.*;
-import java.util.Map.Entry;
 
 public class Main {
     public static void main(String[] args) {
