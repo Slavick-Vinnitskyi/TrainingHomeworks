@@ -1,7 +1,7 @@
 package com.homeworks.arrayAlgorithms;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
+import java.util.Map.Entry;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,11 +11,12 @@ public class Main {
         int[] mergedArray = mergeArrays(firstArray, secondArray);
         outputArrays(firstArray, secondArray, mergedArray);
 
-        int[] arrayForSwap = generateArray(10, -10, 10);
+        int[] arrayForSwap = generateArray(40, -10, 10);
         outputArray("\nbefore swap", arrayForSwap);
         swap(arrayForSwap);
         outputArray("\nafter swap", arrayForSwap);
-
+        System.out.println();
+        countEachElementInArray(arrayForSwap);
 
     }
 
@@ -74,5 +75,16 @@ public class Main {
         System.out.println(message + " : ");
         Arrays.stream(array).forEach(x -> System.out.print(x + " "));
 
+    }
+
+    private static void countEachElementInArray(int[] array) {
+        Map<Integer, Integer> countMap = new HashMap<>(array.length);
+
+        for (int value : array) {
+
+            countMap.merge(value, 1, (a, b) -> a + b); /* ==  if (countMap.get(value) == null) countMap.put(value, 1)  else countMap.put(value, count++);*/
+        }
+
+        countMap.forEach((k, v) -> System.out.print(k + " : " + v + "; "));
     }
 }
