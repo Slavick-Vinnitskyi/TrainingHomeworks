@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -35,5 +32,15 @@ public class Main {
         List<Integer> list = new ArrayList<>(Arrays.asList(4, 3, 2, 5, 3, 4));
         list.removeIf(x -> x == 4);
         list.forEach(System.out::print);
+
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(0, "e");
+        map.put(1, "d");
+        map.put(2, "g");
+        map.put(3, "f");
+        List entryList = new ArrayList(map.entrySet());
+        entryList.forEach(x -> System.out.print(x + "  "));
+        Object s = entryList.get(0);
+        System.out.println(s.toString());
     }
 }
