@@ -2,8 +2,6 @@ package com.homeworks.database;
 
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.sql.*;
 import java.time.LocalDate;
 
