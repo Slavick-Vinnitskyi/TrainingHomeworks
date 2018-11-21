@@ -3,26 +3,41 @@ package com.homeworks.patterns.creational.factory_method.variant1;
 import java.util.Date;
 
 public class FactoryMethodApp {
+    private final static String ROME_MAKER_TYPE = "Rome";
+    private final static String DIGITAL_MAKER_TYPE = "Digital";
+
     public static void main(String[] args) {
-        WatchMaker maker = getMaker("Rome");
+        WatchMaker maker = getMaker(ROME_MAKER_TYPE);
         Watch watch = maker.createWatch();
         watch.showTime();
     }
 
-    public static WatchMaker getMaker(String makerType) {
-        if (makerType.equals("Digital")) {
+    /**
+     * Класс возвращает создателя по его типу
+     *
+     * @param makerType тип создателя
+     * @return создателя по его типу
+     */
+    private static WatchMaker getMaker(String makerType) {
+        if (makerType.equals(ROME_MAKER_TYPE)) {
             return new DigitalWatchMaker();
-        } else if (makerType.equals("Rome")) {
+        } else if (makerType.equals(DIGITAL_MAKER_TYPE)) {
             return new RomeWatchMaker();
         }
         throw new RuntimeException("Не поддерживаемая линия часов :" + makerType);
     }
 }
 
+/**
+ * Интерфейс сущности
+ */
 interface Watch {
     void showTime();
 }
 
+/**
+ * Конкретная сущность
+ */
 class DigitalWatch implements Watch {
 
     @Override
@@ -31,6 +46,9 @@ class DigitalWatch implements Watch {
     }
 }
 
+/**
+ * Конкретная сущность
+ */
 class RomeWatch implements Watch {
 
     @Override
@@ -39,10 +57,16 @@ class RomeWatch implements Watch {
     }
 }
 
+/**
+ * Интерфейс создателя
+ */
 interface WatchMaker {
     Watch createWatch();
 }
 
+/**
+ * Конкретный создатель
+ */
 class DigitalWatchMaker implements WatchMaker {
 
     @Override
@@ -51,6 +75,9 @@ class DigitalWatchMaker implements WatchMaker {
     }
 }
 
+/**
+ * Конкретный создатель
+ */
 class RomeWatchMaker implements WatchMaker {
 
     @Override
@@ -58,4 +85,3 @@ class RomeWatchMaker implements WatchMaker {
         return new RomeWatch();
     }
 }
-
