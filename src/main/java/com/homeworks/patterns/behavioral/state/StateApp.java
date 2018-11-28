@@ -11,6 +11,9 @@ public class StateApp {
     }
 }
 
+/**
+ * Context
+ */
 class Radio {
     private Station station;
 
@@ -33,10 +36,16 @@ class Radio {
     }
 }
 
+/**
+ * State
+ */
 interface Station {
     void play();
 }
 
+/**
+ * Concrete state
+ */
 class Radio7 implements Station {
 
     @Override
@@ -45,6 +54,9 @@ class Radio7 implements Station {
     }
 }
 
+/**
+ * Concrete state
+ */
 class RadioEU implements Station {
 
     @Override
@@ -53,6 +65,9 @@ class RadioEU implements Station {
     }
 }
 
+/**
+ * Concrete state
+ */
 class RadioFM implements Station {
 
     @Override
