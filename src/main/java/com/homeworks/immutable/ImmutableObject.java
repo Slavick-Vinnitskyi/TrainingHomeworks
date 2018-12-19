@@ -1,5 +1,9 @@
 package com.homeworks.immutable;
 
+/**
+ * Instances of this class can`t be changed in any way
+ * clone is used in order to prevent further changing of Objects that will be set
+ */
 public final class ImmutableObject {
     final private Data d;
 
