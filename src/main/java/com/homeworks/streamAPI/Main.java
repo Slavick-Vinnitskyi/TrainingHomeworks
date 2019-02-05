@@ -38,7 +38,7 @@ public class Main {
         map.put(1, "d");
         map.put(2, "g");
         map.put(3, "f");
-        List entryList = new ArrayList(map.entrySet());
+        List<Map.Entry> entryList = new ArrayList(map.entrySet());
         entryList.forEach(x -> System.out.print(x + "  "));
         Object s = entryList.get(0);
         System.out.println(s.toString());
