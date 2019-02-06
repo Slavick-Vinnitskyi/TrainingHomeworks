@@ -60,5 +60,13 @@ public class Main {
         entryList.forEach(x -> System.out.print(x + "  "));
         Object s = entryList.get(0);
         System.out.println(s.toString());
+        System.out.println(factorial(5));
+    }
+
+    private static int factorial(int top_bound) {
+        return IntStream
+                .range(1, top_bound + 1)
+                .reduce((x, y) -> x * y)
+                .getAsInt();
     }
 }
