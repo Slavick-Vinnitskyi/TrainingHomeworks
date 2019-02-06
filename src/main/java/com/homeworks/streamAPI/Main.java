@@ -37,11 +37,14 @@ public class Main {
         System.out.printf("count of bigger then zero element : %d \n", countBiggerZeroElement);
 
         int multiplicationNumber = 4;
-        int[] multipleArray = Arrays.stream(array)
+        int sum = Arrays.stream(array).sum();
+        System.out.println("Sum : " + sum);
+        int multipleArray = Arrays
+                .stream(array)
                 .map((x) -> x *= multiplicationNumber)
-                .toArray();
-        System.out.printf("array multiplicated by %d: ", multiplicationNumber);
-        Arrays.stream(multipleArray).forEach(x -> System.out.print(x + " "));
+                .reduce(0, (x, y) -> x + y);
+
+        System.out.println("Array reduced to its sum : " + multipleArray);
 
         List<Integer> list = new ArrayList<>(Arrays.asList(4, 3, 2, 5, 3, 4));
         list.removeIf(x -> x == 4);
