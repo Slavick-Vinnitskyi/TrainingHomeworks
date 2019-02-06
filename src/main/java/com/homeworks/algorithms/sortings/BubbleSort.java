@@ -1,10 +1,12 @@
 package com.homeworks.algorithms.sortings;
 
 public class BubbleSort implements SortAlgorithm {
+
     @Override
     public int[] sort(int[] inputArray) {
         for (int i = 0; i < inputArray.length; i++) {
             for (int j = 0; j < inputArray.length; j++) {
+                if(i == j) continue;
                 if (inputArray[i] < inputArray[j]) {
                     swap(inputArray, i, j);
                 }
