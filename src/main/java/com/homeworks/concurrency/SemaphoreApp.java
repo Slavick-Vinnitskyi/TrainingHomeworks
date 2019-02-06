@@ -13,7 +13,9 @@ public class SemaphoreApp {
     private static Semaphore mutex = new Semaphore(1);
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        int x = 1;
+        int y = 2;
         new Producer().start();
         new Consumer("Slavick").start();
         new Consumer("John").start();
