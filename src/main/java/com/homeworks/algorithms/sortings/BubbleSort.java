@@ -18,4 +18,20 @@ public class BubbleSort implements SortAlgorithm {
         array[i] = array[j];
         array[j] = temp;
     }
+
+    public int[] whileSort(int[] inputArray) {
+        int size = inputArray.length;
+        if (size <= 1) throw new RuntimeException();
+        boolean b = true;
+        while (b) {
+            b = false;
+            for (int i = 0; i + 1 < size; i++) {
+                if (inputArray[i] > inputArray[i + 1]) {
+                    swap(inputArray, i, i + 1);
+                    b = true;
+                }
+            }
+        }
+        return inputArray;
+    }
 }
