@@ -3,11 +3,10 @@ package com.homeworks.algorithms.sortings;
 public class QuickSort implements SortAlgorithm{
     @Override
     public int[] sort(int[] inputArray) {
-
         return quickSort(inputArray, 0 , inputArray.length);
     }
 
-    public int[] quickSort(int[] inputArray, int left, int right) {
+    private int[] quickSort(int[] inputArray, int left, int right) {
         if(right - left <= 1)
             return inputArray;
         int lleft = left;
