@@ -1,4 +1,4 @@
-package com.homeworks.arrayAlgorithms;
+package com.homeworks.algorithms.arrayAlgorithms;
 
 import java.util.*;
 
